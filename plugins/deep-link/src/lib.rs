@@ -288,11 +288,23 @@ mod imp {
                     bin.file_name().unwrap().to_string_lossy()
                 );
                 let appimage = self.app.env().appimage;
-                let exec = appimage
-                    .clone()
-                    .unwrap_or_else(|| bin.into_os_string())
-                    .to_string_lossy()
-                    .to_string();
+                let exec = if cfg!(debug_assertions) {
+                    format!(
+                        "LD_LIBRARY_PATH={} {}",
+                        std::env::var("LD_LIBRARY_PATH").unwrap_or("".to_owned()),
+                        appimage
+                            .clone()
+                            .unwrap_or_else(|| bin.into_os_string())
+                            .to_string_lossy()
+                            .to_string()
+                    )
+                } else {
+                    appimage
+                        .clone()
+                        .unwrap_or_else(|| bin.into_os_string())
+                        .to_string_lossy()
+                        .to_string()
+                };
                 let qualified_exec = format!("\"{}\" %u", exec);
 
                 let target = self.app.path().data_dir()?.join("applications");

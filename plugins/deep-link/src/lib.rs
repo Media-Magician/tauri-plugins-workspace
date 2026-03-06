@@ -288,7 +288,7 @@ mod imp {
                     bin.file_name().unwrap().to_string_lossy()
                 );
                 let appimage = self.app.env().appimage;
-                let exec = if cfg!(debug_assertions) {
+                let exec = if cfg!(debug_assertions) && std::env::var("LD_LIBRARY_PATH").is_ok() {
                     format!(
                         "LD_LIBRARY_PATH={} {}",
                         std::env::var("LD_LIBRARY_PATH").unwrap_or("".to_owned()),

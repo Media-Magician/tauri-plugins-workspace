@@ -10,7 +10,7 @@ repository = { workspace = true }
 links = "tauri-plugin-dialog"
 
 [features]
-default = ["gtk3"]
+default = ["xdg-portal"]
 xdg-portal = ["rfd/xdg-portal", "rfd/tokio", "rfd/wayland"]
 gtk3 = ["rfd/gtk3"]
 
@@ -45,6 +45,7 @@ tauri = { workspace = true, features = ["wry"] }
 [target."cfg(any(target_os = \"macos\", windows, target_os = \"linux\", target_os = \"dragonfly\", target_os = \"freebsd\", target_os = \"openbsd\", target_os = \"netbsd\"))".dependencies]
 rfd = { version = "0.16", default-features = false, features = [
   "common-controls-v6",
+  "xdg-portal"
 ] }
 
 raw-window-handle = "0.6"

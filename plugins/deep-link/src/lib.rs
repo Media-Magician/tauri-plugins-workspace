@@ -305,7 +305,7 @@ mod imp {
                         .to_string_lossy()
                         .to_string()
                 };
-                let qualified_exec = format!("\"{}\" %u", exec);
+                let qualified_exec = format!("{} %u", exec);
 
                 let target = self.app.path().data_dir()?.join("applications");
 

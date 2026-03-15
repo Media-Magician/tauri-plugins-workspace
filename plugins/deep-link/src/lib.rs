@@ -290,7 +290,7 @@ mod imp {
                 let appimage = self.app.env().appimage;
                 let exec = if cfg!(debug_assertions) && std::env::var("LD_LIBRARY_PATH").is_ok() {
                     format!(
-                        "LD_LIBRARY_PATH={} {}",
+                        "env LD_LIBRARY_PATH={} {}",
                         std::env::var("LD_LIBRARY_PATH").unwrap_or("".to_owned()),
                         appimage
                             .clone()

@@ -6,8 +6,6 @@
 mod config;
 use config::{AssociatedDomain, Config};
 
-const COMMANDS: &[&str] = &["get_current", "register", "unregister", "is_registered"];
-
 // TODO: Consider using activity-alias in case users may have multiple activities in their app.
 fn intent_filter(domain: &AssociatedDomain) -> String {
     let host = domain
@@ -73,7 +71,7 @@ fn intent_filter(domain: &AssociatedDomain) -> String {
 }
 
 fn main() {
-    let result = tauri_plugin::Builder::new(COMMANDS)
+    let result = tauri_plugin::Builder::new(&[])
         .global_api_script_path("./api-iife.js")
         .android_path("android")
         .try_build();

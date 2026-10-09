@@ -30,7 +30,7 @@ schemars = { workspace = true }
 serde = { workspace = true }
 
 [dev-dependencies]
-tauri = { workspace = true, features = ["wry"] }
+tauri = { workspace = true, features = [] }
 
 [dependencies]
 serde = { workspace = true }
@@ -46,4 +46,4 @@ encoding_rs = "0.8"
 os_pipe = "1"
 
 [target.'cfg(target_os = "ios")'.dependencies]
-tauri = { workspace = true, features = ["wry"] }
+tauri = { workspace = true, features = [] }

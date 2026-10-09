@@ -1,0 +1,41 @@
+"$schema" = "schemas/schema.json"
+
+[[permission]]
+identifier = "allow-get-current"
+description = "Enables the get_current command without any pre-configured scope."
+commands.allow = ["get_current"]
+
+[[permission]]
+identifier = "deny-get-current"
+description = "Denies the get_current command without any pre-configured scope."
+commands.deny = ["get_current"]
+
+[[permission]]
+identifier = "allow-register"
+description = "Enables the register command without any pre-configured scope."
+commands.allow = ["register"]
+
+[[permission]]
+identifier = "deny-register"
+description = "Denies the register command without any pre-configured scope."
+commands.deny = ["register"]
+
+[[permission]]
+identifier = "allow-unregister"
+description = "Enables the unregister command without any pre-configured scope."
+commands.allow = ["unregister"]
+
+[[permission]]
+identifier = "deny-unregister"
+description = "Denies the unregister command without any pre-configured scope."
+commands.deny = ["unregister"]
+
+[[permission]]
+identifier = "allow-is-registered"
+description = "Enables the is_registered command without any pre-configured scope."
+commands.allow = ["is_registered"]
+
+[[permission]]
+identifier = "deny-is-registered"
+description = "Denies the is_registered command without any pre-configured scope."
+commands.deny = ["is_registered"]

@@ -25,9 +25,10 @@ ios = { level = "partial", notes = "Only allows to open URLs via `open`" }
 tauri-plugin = { workspace = true, features = ["build"] }
 schemars = { workspace = true }
 serde = { workspace = true }
+serde_json = { workspace = true }
 
 [dev-dependencies]
-tauri = { workspace = true, features = ["wry"] }
+tauri = { workspace = true, features = [] }
 
 [dependencies]
 serde = { workspace = true }
@@ -64,4 +65,4 @@ default-features = false
 features = ["std", "NSURL", "NSArray", "NSString"]
 
 [target.'cfg(target_os = "ios")'.dependencies]
-tauri = { workspace = true, features = ["wry"] }
+tauri = { workspace = true, features = [] }

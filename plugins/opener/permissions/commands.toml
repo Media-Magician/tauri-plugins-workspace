@@ -1,0 +1,31 @@
+"$schema" = "schemas/schema.json"
+
+[[permission]]
+identifier = "allow-open-url"
+description = "Enables the open_url command without any pre-configured scope."
+commands.allow = ["open_url"]
+
+[[permission]]
+identifier = "deny-open-url"
+description = "Denies the open_url command without any pre-configured scope."
+commands.deny = ["open_url"]
+
+[[permission]]
+identifier = "allow-open-path"
+description = "Enables the open_path command without any pre-configured scope."
+commands.allow = ["open_path"]
+
+[[permission]]
+identifier = "deny-open-path"
+description = "Denies the open_path command without any pre-configured scope."
+commands.deny = ["open_path"]
+
+[[permission]]
+identifier = "allow-reveal-item-in-dir"
+description = "Enables the reveal_item_in_dir command without any pre-configured scope."
+commands.allow = ["reveal_item_in_dir"]
+
+[[permission]]
+identifier = "deny-reveal-item-in-dir"
+description = "Denies the reveal_item_in_dir command without any pre-configured scope."
+commands.deny = ["reveal_item_in_dir"]

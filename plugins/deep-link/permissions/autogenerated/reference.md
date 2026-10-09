@@ -44,32 +44,6 @@ Denies the get_current command without any pre-configured scope.
 <tr>
 <td>
 
-`deep-link:allow-is-registered`
-
-</td>
-<td>
-
-Enables the is_registered command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`deep-link:deny-is-registered`
-
-</td>
-<td>
-
-Denies the is_registered command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
 `deep-link:allow-register`
 
 </td>
@@ -115,6 +89,32 @@ Enables the unregister command without any pre-configured scope.
 <td>
 
 Denies the unregister command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`deep-link:allow-is-registered`
+
+</td>
+<td>
+
+Enables the is_registered command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`deep-link:deny-is-registered`
+
+</td>
+<td>
+
+Denies the is_registered command without any pre-configured scope.
 
 </td>
 </tr>

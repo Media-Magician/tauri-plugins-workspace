@@ -34,32 +34,6 @@ This enables opening `mailto:`, `tel:`, `https://` and `http://` urls using thei
 <tr>
 <td>
 
-`opener:allow-open-path`
-
-</td>
-<td>
-
-Enables the open_path command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-`opener:deny-open-path`
-
-</td>
-<td>
-
-Denies the open_path command without any pre-configured scope.
-
-</td>
-</tr>
-
-<tr>
-<td>
-
 `opener:allow-open-url`
 
 </td>
@@ -79,6 +53,32 @@ Enables the open_url command without any pre-configured scope.
 <td>
 
 Denies the open_url command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`opener:allow-open-path`
+
+</td>
+<td>
+
+Enables the open_path command without any pre-configured scope.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+`opener:deny-open-path`
+
+</td>
+<td>
+
+Denies the open_path command without any pre-configured scope.
 
 </td>
 </tr>

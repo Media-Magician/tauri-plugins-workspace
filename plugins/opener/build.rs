@@ -106,14 +106,20 @@ fn _f() {
     };
 }
 
-const COMMANDS: &[&str] = &["open_url", "open_path", "reveal_item_in_dir"];
-
 fn main() {
-    tauri_plugin::Builder::new(COMMANDS)
+    let scope_schema = schemars::generate::SchemaSettings::draft07()
+        .into_generator()
+        .into_root_schema_for::<OpenerScopeEntry>();
+    let scope_schema = serde_json::from_value(
+        serde_json::to_value(scope_schema).expect("failed to serialize opener scope schema"),
+    )
+    .expect("failed to convert opener scope schema for tauri-plugin");
+
+    tauri_plugin::Builder::new(&[])
         .global_api_script_path("./api-iife.js")
         .android_path("android")
         .ios_path("ios")
-        .global_scope_schema(schemars::schema_for!(OpenerScopeEntry))
+        .global_scope_schema(scope_schema)
         .build();
 
     let target_os = std::env::var("CARGO_CFG_TARGET_OS").unwrap();
